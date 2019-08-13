@@ -1,0 +1,9 @@
+{
+  "env": {
+    "DEBUG": "laa:*",
+    "DEBUG_NAMESPACE": "laa:cwc",
+    "ERROR_NAMESPACE": "laa:cwc:error",
+    "REST_PORT": "9922",
+  },
+  "ignore": ["static"]
+}

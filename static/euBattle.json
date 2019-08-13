@@ -1,0 +1,492 @@
+{
+  "_": "updateChatLastMessage",
+  "chat_id": -1001108112459,
+  "last_message": {
+    "_": "message",
+    "id": 5921308672,
+    "sender_user_id": 0,
+    "chat_id": -1001108112459,
+    "is_outgoing": false,
+    "can_be_edited": false,
+    "can_be_forwarded": true,
+    "can_be_deleted_only_for_self": false,
+    "can_be_deleted_for_all_users": false,
+    "is_channel_post": true,
+    "contains_unread_mention": false,
+    "date": 1565679780,
+    "edit_date": 0,
+    "reply_to_message_id": 0,
+    "ttl": 0,
+    "ttl_expires_in": 0,
+    "via_bot_user_id": 0,
+    "author_signature": "",
+    "views": 69,
+    "media_album_id": "0",
+    "content": {
+      "_": "messageText",
+      "text": {
+        "_": "formattedText",
+        "text": "13 Lenzin 1064\nBattle reports:\n⚔ At 🦅Highnest Castle the defenders were wiped out by a horde from  🥔Potato Castle 🐺Wolfpack Castle 🦌Deerhorn Castle 🦈Sharkteeth Castle 🌑Moonlight Castle 🐉Dragonscale Castle.\n🎖Attack leaders: 🌑[BS]Swamp Koala lv65 🌑[ALC]oholic 🐺[BAN]Guardsmen 🌑[NOT]aShark \n🎖Defense leaders: 🦅[ORD]Kaizen 🦅[CHS]Ray915 🦅[ORD]Zeldris 🦅[BYE]liebesleid \n🏆Attackers have pillaged the castle for 11506 gold and 14239 stock.\n\n🛡 At 🐺Wolfpack Castle defenders have easily fought off a small group of .\n🎖Attack leaders: 🦅Isael 🦅Keithtwb 🥔David 🦌D4NKS0N \n🎖Defense leaders: 🐺GeorgeTheMiner 🐺[PAW]Der_Horst 🐺Lord Daken 🐺[FTW]Politox \n🏆Attackers have lost 28 gold.\n\n🛡 At 🦌Deerhorn Castle defenders have easily fought off a small group of .\n🎖Attack leaders: 🦅Joel 🦅JORGITO 🥔[BTW]Pichy 🦅Behemoth \n🎖Defense leaders: 🦌[GOT]X Men 🦌[SPY]Angrox 🦌[PAK]whalien 🦌[SPY]SR-GsABlackbird \n🏆Attackers have lost 36 gold.\n\n🛡 At 🦈Sharkteeth Castle defenders have easily fought off a small group of 🐺Wolfpack Castle & 🦅Highnest Castle.\n🎖Attack leaders: 🐺Sr Knight 🦅Ganti Nama 🦅schastlivy94 🦌Rex-Rex \n🎖Defense leaders: 🦈[AIN]Jagoan Neon 🦈[TDE]Tate no Yuusha 🦈[AIN]Patronus 🦈Tag-308 \n🏆Attackers have lost 28 gold.\n\n🛡 At 🐉Dragonscale Castle defenders have easily fought off a small group of 🐺Wolfpack Castle,🦌Deerhorn Castle &🦈Sharkteeth Castle.\n🎖Attack leaders: 🐺oxcar103 🦈Kajal 🦌Fontanar 🐺SuicideWriter \n🎖Defense leaders: 🐉[KEK]PasirRisBoy 🐉[FUR]BadCat 🐉[DRG]AurothEmpress 🐉[THC]chiila \n🏆Attackers have lost 31 gold.\n\n⚔ At 🌑Moonlight Castle the warriors of 🦅Highnest Castle,🐉Dragonscale Castle,🐺Wolfpack Castle &🦈Sharkteeth Castle have successfully managed to break into the castle.\n🎖Attack leaders: 🐉[NAN]atzu No Taizai 🦅[CHS]epiphany 🐺[FTW]Chris 🐺[RSC]SirEvil \n🎖Defense leaders: 🌑[BOX]veganXjihad 🌑[AUR]Minion 🌑[POD]Keks 🌑[SV]Zero \n🏆Attackers have pillaged the castle for 4600 gold and 6582 stock.\n\n⚔ Battle at 🥔Potato Castle was a bloody massacre, but the forces of 🐺Wolfpack Castle,🦅Highnest Castle,🦈Sharkteeth Castle &🐉Dragonscale Castle were slightly stronger.\n🎖Attack leaders: 🐺Lucius 🦈[ICE]Resonance 🦈[GEE]smtghot 🐉[404]e16311 \n🎖Defense leaders: 🥔[GO]JIRA 🥔[GG]Leeeks 🥔[GO2]nowhere 🥔[GO]Ice Bear \n🏆Attackers have pillaged the castle for 4702 gold and 6476 stock.\n\nScores:\n🐺Wolfpack Castle +25 🏆 points\n🐉Dragonscale Castle +25 🏆 points\n🦈Sharkteeth Castle +19 🏆 points\n🦌Deerhorn Castle +11 🏆 points\n🌑Moonlight Castle +4 🏆 points\n🦅Highnest Castle +4 🏆 points\n🥔Potato Castle +3 🏆 points",
+        "entities": [
+          {
+            "_": "textEntity",
+            "offset": 15,
+            "length": 15,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 233,
+            "length": 20,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 256,
+            "length": 11,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 270,
+            "length": 14,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 287,
+            "length": 11,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 321,
+            "length": 11,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 335,
+            "length": 11,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 349,
+            "length": 12,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 364,
+            "length": 15,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 547,
+            "length": 5,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 555,
+            "length": 8,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 566,
+            "length": 5,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 574,
+            "length": 7,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 604,
+            "length": 14,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 621,
+            "length": 14,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 638,
+            "length": 10,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 651,
+            "length": 12,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 793,
+            "length": 4,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 800,
+            "length": 7,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 810,
+            "length": 10,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 823,
+            "length": 8,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 854,
+            "length": 10,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 867,
+            "length": 11,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 881,
+            "length": 12,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 896,
+            "length": 20,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1085,
+            "length": 9,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1097,
+            "length": 10,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1110,
+            "length": 12,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1125,
+            "length": 7,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1155,
+            "length": 16,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1174,
+            "length": 19,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1196,
+            "length": 13,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1212,
+            "length": 7,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1408,
+            "length": 8,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1419,
+            "length": 5,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1427,
+            "length": 8,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1438,
+            "length": 13,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1474,
+            "length": 16,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1493,
+            "length": 11,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1507,
+            "length": 18,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1528,
+            "length": 11,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1763,
+            "length": 19,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1785,
+            "length": 13,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1801,
+            "length": 10,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1814,
+            "length": 12,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1849,
+            "length": 16,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1868,
+            "length": 11,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1882,
+            "length": 9,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1894,
+            "length": 8,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 2163,
+            "length": 6,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 2172,
+            "length": 14,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 2189,
+            "length": 12,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 2204,
+            "length": 11,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 2238,
+            "length": 8,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 2249,
+            "length": 10,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 2262,
+            "length": 12,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 2277,
+            "length": 12,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "order": "0"
+}

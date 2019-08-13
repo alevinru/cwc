@@ -1,0 +1,412 @@
+{
+  "_": "updateChatLastMessage",
+  "chat_id": -1001369273162,
+  "last_message": {
+    "_": "message",
+    "id": 4679794688,
+    "sender_user_id": 0,
+    "chat_id": -1001369273162,
+    "is_outgoing": false,
+    "can_be_edited": false,
+    "can_be_forwarded": true,
+    "can_be_deleted_only_for_self": false,
+    "can_be_deleted_for_all_users": false,
+    "is_channel_post": true,
+    "contains_unread_mention": false,
+    "date": 1565705014,
+    "edit_date": 0,
+    "reply_to_message_id": 0,
+    "ttl": 0,
+    "ttl_expires_in": 0,
+    "via_bot_user_id": 0,
+    "author_signature": "",
+    "views": 287,
+    "media_album_id": "0",
+    "content": {
+      "_": "messageText",
+      "text": {
+        "_": "formattedText",
+        "text": "14 Lenzin 1064\nРезультаты сражений:\n🛡 В битве у ворот 🐢Тортуги защитники легко отбились от жалкой горстки воинов 🍆Фермы.\n🎖Лидеры атаки: 🍆Mathew 🖤[NL]tahir_go \n🎖Лидеры защиты: 🐢[TEA]Аргест ТС3О 🐢[RUМ]Alkin 🐢[BBS]MiniSatana 🐢[PYN]Голос свыше \n🏆У атакующих отобрали 13 золотых монет.\n\n⚔ В битве у ворот ☘️Оплота воины  🖤Скалы 🐢Тортуги 🦇Ночи 🌹Рассвета 🍆Фермы успешно атаковали защитников.\n🎖Лидеры атаки: 🐢[13G]BorovkovEA 🐢[WCH]Хранитель котят 🐢[НШ]eto je val 🐢[OCE]Atomic \n🎖Лидеры защиты: ☘️[НОЖ]Хранитель Оплота ☘️[НОЖ]В ПЕЧЕНЬ ☘️[TWR]pchelka ☘️[НОЖ]Щит Оплота \n🏆Атакующие разграбили замок на 9891 золотых монет, потеряно 14706 складских ячеек.\n\n🛡 Защитники 🌹Рассвета скучали, на них никто не напал.\n\n🛡 В битве у ворот 🍁Амбера защитники легко отбились от жалкой горстки воинов🌹Рассвета,🍆Фермы &🖤Скалы.\n🎖Лидеры атаки: 🌹[LVT]OderRodion 🍆Canadian feller 🖤[KYS]SCIENTIST 🦇[ALC]Трунь \n🎖Лидеры защиты: 🍁[7DS]mIRA 🍁[9KA]su4ara 9KA 🍁[YLT]Fortunate son 🍁[7DS]Acedia \n🏆У атакующих отобрали 88 золотых монет.\n\n⚔ В битве у ворот 🦇Ночи воины  🐢Тортуги 🍆Фермы 🍁Амбера 🌹Рассвета ☘️Оплота успешно атаковали защитников.\n🎖Лидеры атаки: 🐢[JR]Шататель Скалы 🐢[DTF]ArtemisEntrery 🍁[RZD]47th 🍆[TND]Разруливает \n🎖Лидеры защиты: 🦇[DS]Sir Lancelot 🦇[NTR]Suworow 🦇[AFS]teffsy 🦇[DS]Crosby15 \n🏆Атакующие разграбили замок на 9676 золотых монет, потеряно 22307 складских ячеек.\n\n🛡 В битве у ворот 🖤Скалы защитники легко отбились от жалкой горстки воинов🦇Ночи,🌹Рассвета &🍁Амбера.\n🎖Лидеры атаки: 🍁[A1]Nihilias 🍁[WH]CruorVultTigeron 🦇Rock Master 🌹Invisigod \n🎖Лидеры защиты: 🖤[TS]Poherantos 🖤[KVA]ДЕТОНАТОР 🖤[IRN]Sanktym 🖤[ARR]abubaca4 \n🏆У атакующих отобрали 191 золотых монет.\n\n⚔ В битве у ворот 🍆Фермы воины ☘️Оплота,🖤Скалы &🦇Ночи успешно атаковали защитников.\n🎖Лидеры атаки: 🖤[SS]🎗AndreGod 🖤[NMR]Fishboss 🦇[TNT]Flame4 🖤[KSS]all4u \n🎖Лидеры защиты: 🍆[MLT]pelmenka 🍆[ЕGG]IS A TRAP 🍆[ASS]Дядя Стёпа 🍆[2CH]голос овощей \n🏆Атакующие разграбили замок на 10684 золотых монет, потеряно 17382 складских ячеек.\n\nПо итогам сражений замкам начислено:\n🐢Тортуга +64 🏆 очков\n🖤Скала +50 🏆 очков\n🍁Амбер +26 🏆 очков\n🌹Замок Рассвета +20 🏆 очков\n🦇Ночной Замок +7 🏆 очков\n☘️Оплот +4 🏆 очков\n🍆Ферма +4 🏆 очков",
+        "entities": [
+          {
+            "_": "textEntity",
+            "offset": 15,
+            "length": 20,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 142,
+            "length": 6,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 151,
+            "length": 12,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 184,
+            "length": 16,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 203,
+            "length": 10,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 216,
+            "length": 15,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 234,
+            "length": 16,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 420,
+            "length": 15,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 438,
+            "length": 20,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 461,
+            "length": 14,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 478,
+            "length": 11,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 510,
+            "length": 21,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 534,
+            "length": 13,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 550,
+            "length": 12,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 565,
+            "length": 15,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 848,
+            "length": 15,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 866,
+            "length": 15,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 884,
+            "length": 14,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 901,
+            "length": 10,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 932,
+            "length": 9,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 944,
+            "length": 15,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 962,
+            "length": 18,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 983,
+            "length": 11,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1165,
+            "length": 18,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1186,
+            "length": 19,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1208,
+            "length": 9,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1220,
+            "length": 16,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1257,
+            "length": 16,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1276,
+            "length": 12,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1291,
+            "length": 11,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1305,
+            "length": 12,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1527,
+            "length": 12,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1542,
+            "length": 20,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1565,
+            "length": 11,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1579,
+            "length": 9,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1609,
+            "length": 14,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1626,
+            "length": 14,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1643,
+            "length": 12,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1658,
+            "length": 13,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1821,
+            "length": 14,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1838,
+            "length": 13,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1854,
+            "length": 11,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1868,
+            "length": 10,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1899,
+            "length": 13,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1915,
+            "length": 14,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1932,
+            "length": 15,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          },
+          {
+            "_": "textEntity",
+            "offset": 1950,
+            "length": 17,
+            "type": {
+              "_": "textEntityTypeBold"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "order": "0"
+}

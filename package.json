@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint src",
-    "test": "npm run lint",
+    "test": "mocha --require esm",
     "start": "nodemon --exec 'npm run lint && node -r esm' -- src"
   },
   "keywords": [],
@@ -22,9 +22,12 @@
     "tdl-tdlib-ffi": "^1.4.0"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-mocha": "^6.0.0",
+    "mocha": "^6.2.0",
     "nodemon": "^1.19.1"
   }
 }

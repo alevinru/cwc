@@ -6,8 +6,8 @@ module.exports = {
     parser: 'babel-eslint'
   },
   env: {},
-  extends: ['airbnb-base'],
-  plugins: [],
+  extends: ['airbnb-base', 'plugin:mocha/recommended'],
+  plugins: ['mocha'],
   globals: {},
   settings: {},
   rules: {

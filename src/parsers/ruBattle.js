@@ -1,4 +1,6 @@
 import lo from 'lodash';
+// import log from 'sistemium-telegram/services/log';
+// const { debug } = log('ruBattle');
 
 const castles = new Map([
   ['🐢Тортуги', 't'],
@@ -22,7 +24,8 @@ const DIFF_MAP = new Map([
 const MAINLINE_RE = /(🔱)?(🛡|⚔) ([^\n]+)/;
 const ATK_LINE_RE = /🎖Лидеры атаки: ([^\n]+)/;
 const DEF_LINE_RE = /🎖Лидеры защиты: ([^\n]+)/;
-const GOLD_LINE_RE = /🏆(У атакующих|Атакующие).+(\d+) золотых монет/;
+const GOLD_LINE_RE = /🏆(У атакующих|Атакующие).+ (\d+) золотых монет/;
+const STOCK_LINE_RE = /🏆(У атакующих|Атакующие).+ (\d+) складских ячеек/;
 
 export default function (text) {
 
@@ -32,7 +35,9 @@ export default function (text) {
 
   castles.forEach((val, key) => {
 
-    const part = lo.find(parts, partText => partText.match(key));
+    const part = lo.find(parts, partText => {
+      return partText.match(RegExp(`(у ворот|Защитники) ${key}`))
+    });
 
     if (!part) {
       return;
@@ -43,15 +48,18 @@ export default function (text) {
     const [, atkLine] = part.match(ATK_LINE_RE) || [];
     const [, defLine] = part.match(DEF_LINE_RE) || [];
     const [, goldType, goldText] = part.match(GOLD_LINE_RE) || [];
+    const [, , stockText] = part.match(STOCK_LINE_RE) || [];
+
+    // debug(resLine);
 
     results.push({
-      castle: key[0],
+      castle: key.match(/[^а-я]+/i)[0],
       code: val,
       result: battleResult(statusIcon),
       difficulty: battleDifficulty(resLine),
       ga: !!gaIcon,
       gold: battleGold(goldType, goldText),
-      stock: 0,
+      stock: battleGold(goldType, stockText),
       score: 0,
       atkLeaders: battleLeaders(atkLine),
       defLeaders: battleLeaders(defLine),
@@ -74,7 +82,6 @@ function battleGold(type, text) {
   if (!text) {
     return 0;
   }
-
   return parseInt(text, 0) * (type === 'Атакующие' ? -1 : 1);
 }
 
@@ -91,8 +98,8 @@ function battleResult(icon) {
 }
 
 function battleDifficulty(text) {
-  const found = lo.find(Array.from(DIFF_MAP.keys()), key => text.match(key));
-  return found && DIFF_MAP.get(found);
+  const found = lo.find(Array.from(DIFF_MAP.keys()), key => text.match(RegExp(key)));
+  return found ? DIFF_MAP.get(found) : null;
 }
 
 /*

@@ -5,5 +5,5 @@
     "ERROR_NAMESPACE": "laa:cwc:error",
     "REST_PORT": "9922",
   },
-  "ignore": ["static"]
+  "watch": ["src"]
 }

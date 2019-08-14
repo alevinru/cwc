@@ -2,7 +2,7 @@ import lo from 'lodash';
 // import log from 'sistemium-telegram/services/log';
 // const { debug } = log('ruBattle');
 
-const castles = new Map([
+const CASTLES = new Map([
   ['🐢Тортуги', 't'],
   ['☘️Оплота', 'o'],
   ['🌹Рассвета', 'r'],
@@ -11,6 +11,8 @@ const castles = new Map([
   ['🖤Скалы', 's'],
   ['🍆Фермы', 'f'],
 ]);
+
+const CASTLE_ICONS = ['🐢', '☘️', '🌹', '🍁', '🦇', '🖤', '🍆'];
 
 const DIFF_MAP = new Map([
   ['легко отбились', 0],
@@ -33,7 +35,7 @@ export default function (text) {
 
   const results = [];
 
-  castles.forEach((val, key) => {
+  CASTLES.forEach((val, key) => {
 
     const part = lo.find(parts, partText => {
       return partText.match(RegExp(`(у ворот|Защитники) ${key}`))
@@ -74,8 +76,11 @@ export default function (text) {
 
 }
 
-function battleLeaders() {
-  return [];
+function battleLeaders(text) {
+  if (!text) {
+    return [];
+  }
+  return text.split(RegExp(` (?=${CASTLE_ICONS.join('|')})`));
 }
 
 function battleGold(type, text) {

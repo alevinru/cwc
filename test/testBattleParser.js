@@ -23,8 +23,13 @@ describe('Battle results parser', function () {
       gold: 13,
       stock: 0,
       result: 'protected',
-      atkLeaders: [],
-      defLeaders: [],
+      atkLeaders: ['🍆Mathew', '🖤[NL]tahir_go '],
+      defLeaders: [
+        '🐢[TEA]Аргест ТС3О',
+        '🐢[RUМ]Alkin',
+        '🐢[BBS]MiniSatana',
+        '🐢[PYN]Голос свыше ',
+      ],
       score: 0,
     });
 
@@ -36,8 +41,18 @@ describe('Battle results parser', function () {
       gold: -9891,
       stock: -14706,
       result: 'breached',
-      atkLeaders: [],
-      defLeaders: [],
+      atkLeaders: [
+        '🐢[13G]BorovkovEA',
+        '🐢[WCH]Хранитель котят',
+        '🐢[НШ]eto je val',
+        '🐢[OCE]Atomic ',
+      ],
+      defLeaders: [
+        '☘️[НОЖ]Хранитель Оплота',
+        '☘️[НОЖ]В ПЕЧЕНЬ',
+        '☘️[TWR]pchelka',
+        '☘️[НОЖ]Щит Оплота ',
+      ],
       score: 0,
     });
 

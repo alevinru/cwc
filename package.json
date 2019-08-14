@@ -16,6 +16,7 @@
     "koa": "^2.7.0",
     "koa-router": "^7.4.0",
     "lodash": "^4.17.15",
+    "mongoose": "^5.6.9",
     "sistemium-telegram": "^1.2.11",
     "tdl": "^6.0.1",
     "tdl-tdlib-ffi": "^1.4.0"

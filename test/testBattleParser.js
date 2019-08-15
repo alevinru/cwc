@@ -1,19 +1,22 @@
 import ruBattle from '../src/parsers/ruBattle';
-import chai from 'chai';
+import { expect } from 'chai';
 import { readFile } from '../src/lib/fs';
-import { battleText } from '../src/parsers/ruBattle';
+import { battleText, battleMessageDate, dateFormat } from '../src/lib/battles';
 
 describe('Battle results parser', function () {
 
   it('should parse message text', async function () {
 
     const battleJson = await readFile('static/ruBattle.json');
-    const battlePost = JSON.parse(battleJson);
-    const { results } = ruBattle(battleText(battlePost));
+    const msg = JSON.parse(battleJson);
+    const msgDate = battleMessageDate(msg);
+    const { results, date } = ruBattle(battleText(msg), msgDate);
 
-    chai.expect(results.length).equal(7);
+    expect(results.length).equal(7);
 
-    chai.expect(results[0]).to.eql({
+    expect(dateFormat(date)).equal('🌞 13/08');
+
+    expect(results[0]).to.eql({
       castle: '🐢',
       code: 't',
       difficulty: 0,
@@ -31,7 +34,7 @@ describe('Battle results parser', function () {
       score: 64,
     });
 
-    chai.expect(results[1]).to.eql({
+    expect(results[1]).to.eql({
       castle: '☘️',
       code: 'o',
       difficulty: 1,
@@ -55,7 +58,7 @@ describe('Battle results parser', function () {
     });
 
     // Bored defenders
-    chai.expect(results[2].difficulty).equal(null);
+    expect(results[2].difficulty).equal(null);
 
   });
 
@@ -64,7 +67,7 @@ describe('Battle results parser', function () {
     const gaBattle = await readFile('static/ruGA.txt');
     const { results } = ruBattle(gaBattle.toString());
 
-    chai.expect(results[0]).to.eql({
+    expect(results[0]).to.eql({
       castle: '🍁',
       code: 'a',
       difficulty: 2,
@@ -94,7 +97,7 @@ describe('Battle results parser', function () {
     const massacreBattle = await readFile('static/ruMassacre.txt');
     const { results } = ruBattle(massacreBattle.toString());
 
-    chai.expect(results[6].difficulty).to.eql(2);
+    expect(results[6].difficulty).to.eql(2);
 
   });
 

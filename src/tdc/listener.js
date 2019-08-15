@@ -1,5 +1,5 @@
 import log from 'sistemium-telegram/services/log';
-import { battleText } from '../parsers/ruBattle';
+import { battleText } from '../lib/battles';
 import { writeFile } from '../lib/fs';
 
 const { debug, error } = log('listener');

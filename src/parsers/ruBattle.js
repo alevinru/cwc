@@ -1,7 +1,10 @@
 import lo from 'lodash';
 import log from 'sistemium-telegram/services/log';
+import * as battles from '../lib/battles';
 
 const { error } = log('ruBattle');
+
+const BATTLE_HOUR = 2;
 
 const CASTLES = new Map([
   ['🐢Тортуги', 't'],
@@ -25,8 +28,6 @@ const DIFF_MAP = new Map([
   ['настоящая бойня', 2],
 ]);
 
-const IS_BATTLE_RE = /Результаты сражений/;
-
 const MAINLINE_RE = /(🔱)?(🛡|⚔) ([^\n]+)/;
 const ATK_LINE_RE = /🎖Лидеры атаки: ([^\n]+)/;
 const DEF_LINE_RE = /🎖Лидеры защиты: ([^\n]+)/;
@@ -35,7 +36,7 @@ const STOCK_LINE_RE = /🏆(У атакующих|Атакующие).+ (\d+) с
 
 const POINTS_START_RE = /По итогам сражений замкам начислено/;
 
-export default function (text) {
+export default function (text, date) {
 
   const parts = text.split('\n\n');
 
@@ -85,15 +86,11 @@ export default function (text) {
   });
 
   return {
+    date: battles.battleDate(date, BATTLE_HOUR),
     results,
     text,
   };
 
-}
-
-export function battleText(message) {
-  const text = lo.get(message, 'last_message.content.text.text');
-  return IS_BATTLE_RE.test(text) && text;
 }
 
 function scoresHash(text) {

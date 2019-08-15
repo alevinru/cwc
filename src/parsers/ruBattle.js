@@ -1,6 +1,7 @@
 import lo from 'lodash';
-// import log from 'sistemium-telegram/services/log';
-// const { debug } = log('ruBattle');
+import log from 'sistemium-telegram/services/log';
+
+const { error } = log('ruBattle');
 
 const CASTLES = new Map([
   ['🐢Тортуги', 't'],
@@ -15,6 +16,7 @@ const CASTLES = new Map([
 const CASTLE_ICONS = ['🐢', '☘️', '🌹', '🍁', '🦇', '🖤', '🍆'];
 
 const DIFF_MAP = new Map([
+  ['скучали, на них никто не напал', null],
   ['легко отбились', 0],
   ['значительным преимуществом', 0],
   ['успешно атаковали', 1],
@@ -25,7 +27,7 @@ const DIFF_MAP = new Map([
 
 const IS_BATTLE_RE = /Результаты сражений/;
 
-const MAINLINE_RE = /(🔱)?(🛡|⚔️) ([^\n]+)/;
+const MAINLINE_RE = /(🔱)?(🛡|⚔) ([^\n]+)/;
 const ATK_LINE_RE = /🎖Лидеры атаки: ([^\n]+)/;
 const DEF_LINE_RE = /🎖Лидеры защиты: ([^\n]+)/;
 const GOLD_LINE_RE = /🏆(У атакующих|Атакующие).+ (\d+) золотых монет/;
@@ -60,7 +62,11 @@ export default function (text) {
     const [, goldType, goldText] = part.match(GOLD_LINE_RE) || [];
     const [, , stockText] = part.match(STOCK_LINE_RE) || [];
 
-    // console.log(part);
+    if (!resLine) {
+      error(code, text);
+      throw Error('Not matched battle mainline');
+    }
+
     const castle = key.match(/[^а-я]+/i)[0];
 
     results.push({
@@ -116,18 +122,22 @@ function battleGold(type, text) {
 
 function battleResult(icon) {
   switch (icon) {
-    case '⚔️':
+    case '⚔':
       return 'breached';
     case '🔱🛡':
     case '🛡':
       return 'protected';
     default:
-      return null;
+      throw Error(`Unexpected battleResult icon ${icon}`);
   }
 }
 
 function battleDifficulty(text) {
   const found = lo.find(Array.from(DIFF_MAP.keys()), key => text.match(RegExp(key)));
+  if (!found) {
+    error('battleDifficulty', text);
+    throw Error('Not found battle difficulty');
+  }
   return found ? DIFF_MAP.get(found) : null;
 }
 

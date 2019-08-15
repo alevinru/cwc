@@ -3,6 +3,7 @@ import log from 'sistemium-telegram/services/log';
 import emitter, { GOT_CODE } from './api';
 import CWCTdc from './lib/CWCTdc';
 import { writeFile } from './lib/fs';
+import { battleText } from './parsers/ruBattle';
 
 const { debug, error } = log('index');
 
@@ -13,13 +14,24 @@ const chats = [
 
 const tdc = new CWCTdc({ emitter, codeEvent: GOT_CODE });
 
-tdc.client()
-  .on('update', update => {
+tdc.getClient()
+  .on('update', async update => {
     const { chat_id: chatId } = update;
     if (!chats.includes(chatId)) {
       return;
     }
-    debug('update:', JSON.stringify(update));
+    const text = battleText(update);
+    if (!text) {
+      return;
+    }
+    const { last_message: { date } } = update;
+    debug('battle:', date, text.length);
+    try {
+      await writeFile(`./logs/battles/${date}.txt`, text);
+    } catch (e) {
+      error(e);
+      process.exit();
+    }
   });
 
 main().catch(error);

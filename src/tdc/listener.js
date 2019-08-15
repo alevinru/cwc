@@ -24,6 +24,7 @@ export default async function (update) {
   const text = battleText(update);
 
   if (!text) {
+    debug('ignore', JSON.stringify(update));
     return false;
   }
 
@@ -49,6 +50,8 @@ export default async function (update) {
     },
     { upsert: true, new: true, useFindAndModify: false },
   ];
+
+  debug('saving:', key);
 
   return Battle.findOneAndUpdate(...args);
 

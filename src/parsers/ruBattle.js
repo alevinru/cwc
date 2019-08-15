@@ -23,7 +23,7 @@ const DIFF_MAP = new Map([
   ['настоящая бойня', 2],
 ]);
 
-const MAINLINE_RE = /(🔱)?(🛡|⚔) ([^\n]+)/;
+const MAINLINE_RE = /(🔱)?(🛡|⚔️) ([^\n]+)/;
 const ATK_LINE_RE = /🎖Лидеры атаки: ([^\n]+)/;
 const DEF_LINE_RE = /🎖Лидеры защиты: ([^\n]+)/;
 const GOLD_LINE_RE = /🏆(У атакующих|Атакующие).+ (\d+) золотых монет/;
@@ -58,7 +58,7 @@ export default function (text) {
     const [, goldType, goldText] = part.match(GOLD_LINE_RE) || [];
     const [, , stockText] = part.match(STOCK_LINE_RE) || [];
 
-    // debug(resLine);
+    // console.log(part);
     const castle = key.match(/[^а-я]+/i)[0];
 
     results.push({
@@ -109,7 +109,7 @@ function battleGold(type, text) {
 
 function battleResult(icon) {
   switch (icon) {
-    case '⚔':
+    case '⚔️':
       return 'breached';
     case '🔱🛡':
     case '🛡':
@@ -132,7 +132,7 @@ function battleDifficulty(text) {
 🎖Лидеры защиты: 🐢[TEA]Аргест ТС3О 🐢[RUМ]Alkin 🐢[BBS]MiniSatana 🐢[PYN]Голос свыше
 🏆У атакующих отобрали 13 золотых монет.
 
-⚔ В битве у ворот ☘️Оплота воины  🖤Скалы 🐢Тортуги 🦇Ночи 🌹Рассвета 🍆Фермы
+⚔️ В битве у ворот ☘️Оплота воины  🖤Скалы 🐢Тортуги 🦇Ночи 🌹Рассвета 🍆Фермы
     успешно атаковали защитников.
 🎖Лидеры атаки: 🐢[13G]BorovkovEA 🐢[WCH]Хранитель котят 🐢[НШ]eto je val 🐢[OCE]Atomic
 🎖Лидеры защиты: ☘️[НОЖ]Хранитель Оплота ☘️[НОЖ]В ПЕЧЕНЬ ☘️[TWR]pchelka ☘️[НОЖ]Щит Оплота
@@ -146,7 +146,7 @@ function battleDifficulty(text) {
 🎖Лидеры защиты: 🍁[7DS]mIRA 🍁[9KA]su4ara 9KA 🍁[YLT]Fortunate son 🍁[7DS]Acedia
 🏆У атакующих отобрали 88 золотых монет.
 
-⚔ В битве у ворот 🦇Ночи воины  🐢Тортуги 🍆Фермы 🍁Амбера 🌹Рассвета ☘️Оплота
+⚔️ В битве у ворот 🦇Ночи воины  🐢Тортуги 🍆Фермы 🍁Амбера 🌹Рассвета ☘️Оплота
     успешно атаковали защитников.
 🎖Лидеры атаки: 🐢[JR]Шататель Скалы 🐢[DTF]ArtemisEntrery 🍁[RZD]47th 🍆[TND]Разруливает
 🎖Лидеры защиты: 🦇[DS]Sir Lancelot 🦇[NTR]Suworow 🦇[AFS]teffsy 🦇[DS]Crosby15
@@ -158,7 +158,7 @@ function battleDifficulty(text) {
 🎖Лидеры защиты: 🖤[TS]Poherantos 🖤[KVA]ДЕТОНАТОР 🖤[IRN]Sanktym 🖤[ARR]abubaca4
 🏆У атакующих отобрали 191 золотых монет.
 
-⚔ В битве у ворот 🍆Фермы воины ☘️Оплота,🖤Скалы &🦇Ночи успешно атаковали защитников.
+⚔️ В битве у ворот 🍆Фермы воины ☘️Оплота,🖤Скалы &🦇Ночи успешно атаковали защитников.
 🎖Лидеры атаки: 🖤[SS]🎗AndreGod 🖤[NMR]Fishboss 🦇[TNT]Flame4 🖤[KSS]all4u
 🎖Лидеры защиты: 🍆[MLT]pelmenka 🍆[ЕGG]IS A TRAP 🍆[ASS]Дядя Стёпа 🍆[2CH]голос овощей
 🏆Атакующие разграбили замок на 10684 золотых монет, потеряно 17382 складских ячеек.

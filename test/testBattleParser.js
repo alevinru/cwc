@@ -74,10 +74,29 @@ describe('Battle results parser', function () {
       gold: 3308,
       stock: 0,
       result: 'protected',
-      atkLeaders: [],
-      defLeaders: [],
+      atkLeaders: [
+        '🖤[SS]🎗AndreGod',
+        '☘️[OWL]Kaffka',
+        '🖤[KSS]all4u',
+        '🦇[TNT]Flame4',
+      ],
+      defLeaders: [
+        '🍁[РЖД]Grozoth',
+        '🍁[7DS]mIRA',
+        '🍁[YLT]Fortunate son',
+        '🍁[AT]Злобный Кроля',
+      ],
       score: 0,
     });
+
+  });
+
+  it('should detect massacre', async function () {
+
+    const massacreBattle = await readFile('static/ruMassacre.txt');
+    const { results } = ruBattle(massacreBattle.toString());
+
+    chai.expect(results[6].difficulty).to.eql(2);
 
   });
 

@@ -8,6 +8,8 @@ import Battle from '../models/Battle';
 
 const { debug, error } = log('listener');
 
+const { LOGS_PATH } = process.env;
+
 const chats = [
   // -1001108112459, // CW2
   -1001369273162, // CW3
@@ -32,7 +34,9 @@ export default async function (update) {
   debug('battle:', date, text.length);
 
   try {
-    await writeFile(`./logs/battles/${date}.txt`, text);
+    if (LOGS_PATH) {
+      await writeFile(`./${LOGS_PATH}/${date}.txt`, text);
+    }
   } catch (e) {
     error(e);
     process.exit();

@@ -23,6 +23,8 @@ const DIFF_MAP = new Map([
   ['настоящая бойня', 2],
 ]);
 
+const IS_BATTLE_RE = /Результаты сражений/;
+
 const MAINLINE_RE = /(🔱)?(🛡|⚔️) ([^\n]+)/;
 const ATK_LINE_RE = /🎖Лидеры атаки: ([^\n]+)/;
 const DEF_LINE_RE = /🎖Лидеры защиты: ([^\n]+)/;
@@ -81,6 +83,11 @@ export default function (text) {
     text,
   };
 
+}
+
+export function battleText(message) {
+  const text = lo.get(message, 'last_message.content.text.text');
+  return IS_BATTLE_RE.test(text) && text;
 }
 
 function scoresHash(text) {

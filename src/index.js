@@ -2,6 +2,7 @@ import log from 'sistemium-telegram/services/log';
 
 import emitter, { GOT_CODE } from './api';
 import CWCTdc from './lib/CWCTdc';
+import { writeFile } from './lib/fs';
 
 const { debug, error } = log('index');
 

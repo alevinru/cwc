@@ -1,9 +1,7 @@
 import ruBattle from '../src/parsers/ruBattle';
 import chai from 'chai';
-import fs from 'fs';
-import util from 'util';
-
-const readFile = util.promisify(fs.readFile);
+import { readFile } from '../src/lib/fs';
+import { battleText } from '../src/parsers/ruBattle';
 
 describe('Battle results parser', function () {
 
@@ -11,7 +9,7 @@ describe('Battle results parser', function () {
 
     const battleJson = await readFile('static/ruBattle.json');
     const battlePost = JSON.parse(battleJson);
-    const { results } = ruBattle(battlePost.last_message.content.text.text);
+    const { results } = ruBattle(battleText(battlePost));
 
     chai.expect(results.length).equal(7);
 

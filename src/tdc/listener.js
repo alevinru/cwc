@@ -1,4 +1,5 @@
 import log from 'sistemium-telegram/services/log';
+import lo from 'lodash';
 import { battleText, battleMessageDate } from '../lib/battles';
 import { writeFile } from '../lib/fs';
 import parser from '../parsers/ruBattle';
@@ -36,16 +37,19 @@ export default async function (update) {
     process.exit();
   }
 
-  try {
-    const parsed = parser(text, battleMessageDate(update));
-    const { date } = parsed;
-    parsed.ts = new Date();
-    const options = { upsert: true, returnNewDocument: true };
-    return await Battle.findOneAndReplace({ date }, parsed, options);
-  } catch (e) {
-    error(e);
-  }
+  const parsed = parser(text, battleMessageDate(update));
+  const key = { date: parsed.date };
+  const $setOnInsert = lo.omit(parsed, Object.keys(key));
 
-  return false;
+  const args = [
+    key,
+    {
+      $setOnInsert,
+      $set: { ts: new Date() },
+    },
+    { upsert: true, new: true, useFindAndModify: false },
+  ];
+
+  return Battle.findOneAndUpdate(...args);
 
 }

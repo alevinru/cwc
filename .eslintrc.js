@@ -31,5 +31,9 @@ module.exports = {
     'padded-blocks': 'off',
     'arrow-parens': ['error', 'as-needed'],
     'no-mixed-operators': 'off',
+    'arrow-body-style': 'off',
+    'import/prefer-default-export': 'off',
+    'prefer-object-spread': 'off',
+
   }
 };

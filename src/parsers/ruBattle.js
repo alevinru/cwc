@@ -44,7 +44,7 @@ export default function (text) {
   CASTLES.forEach((code, key) => {
 
     const part = lo.find(parts, partText => {
-      return partText.match(RegExp(`(у ворот|Защитники) ${key}`))
+      return partText.match(RegExp(`(у ворот|Защитники) ${key}`));
     });
 
     if (!part) {

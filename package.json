@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint src",
     "test": "mocha --require esm",
-    "start": "nodemon --exec 'npm run lint && node -r esm' -- src"
+    "start": "nodemon --exec 'npm run lint && node -r esm' -- src",
+    "build": "npm run lint && rm -rf dist && cp -r src dist && cp package.json dist"
   },
   "keywords": [],
   "author": "Alexander Levin",

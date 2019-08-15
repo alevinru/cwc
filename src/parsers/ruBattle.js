@@ -36,7 +36,7 @@ const STOCK_LINE_RE = /🏆(У атакующих|Атакующие).+ (\d+) с
 
 const POINTS_START_RE = /По итогам сражений замкам начислено/;
 
-export default function (text, date) {
+export default function (text, reportDate) {
 
   const parts = text.split('\n\n');
 
@@ -86,7 +86,8 @@ export default function (text, date) {
   });
 
   return {
-    date: battles.battleDate(date, BATTLE_HOUR),
+    reportDate,
+    date: battles.battleDate(reportDate, BATTLE_HOUR),
     results,
     text,
   };

@@ -29,13 +29,19 @@ const DEF_LINE_RE = /🎖Лидеры защиты: ([^\n]+)/;
 const GOLD_LINE_RE = /🏆(У атакующих|Атакующие).+ (\d+) золотых монет/;
 const STOCK_LINE_RE = /🏆(У атакующих|Атакующие).+ (\d+) складских ячеек/;
 
+const POINTS_START_RE = /По итогам сражений замкам начислено/;
+
 export default function (text) {
 
   const parts = text.split('\n\n');
 
   const results = [];
 
-  CASTLES.forEach((val, key) => {
+  const pointsText = lo.find(parts, p => POINTS_START_RE.test(p));
+
+  const scores = scoresHash(pointsText || '');
+
+  CASTLES.forEach((code, key) => {
 
     const part = lo.find(parts, partText => {
       return partText.match(RegExp(`(у ворот|Защитники) ${key}`))
@@ -53,18 +59,19 @@ export default function (text) {
     const [, , stockText] = part.match(STOCK_LINE_RE) || [];
 
     // debug(resLine);
+    const castle = key.match(/[^а-я]+/i)[0];
 
     results.push({
-      castle: key.match(/[^а-я]+/i)[0],
-      code: val,
+      castle,
+      code,
       result: battleResult(statusIcon),
       difficulty: battleDifficulty(resLine),
       ga: !!gaIcon,
       gold: battleGold(goldType, goldText),
       stock: battleGold(goldType, stockText),
-      score: 0,
-      atkLeaders: battleLeaders(atkLine),
-      defLeaders: battleLeaders(defLine),
+      score: scores[castle],
+      atkLeaders: battleLeaders(lo.trim(atkLine)),
+      defLeaders: battleLeaders(lo.trim(defLine)),
     });
 
   });
@@ -73,6 +80,16 @@ export default function (text) {
     results,
     text,
   };
+
+}
+
+function scoresHash(text) {
+
+  return lo.mapValues(lo.keyBy(CASTLE_ICONS), castle => {
+    const re = RegExp(`${castle}.+ [+](\\d+) 🏆 очков`);
+    const [, points] = text.match(re) || [];
+    return parseInt(points, 0) || 0;
+  });
 
 }
 

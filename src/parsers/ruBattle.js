@@ -104,7 +104,8 @@ function battleLeaders(text) {
   if (!text) {
     return [];
   }
-  return text.split(RegExp(` (?=${CASTLE_ICONS.join('|')})`));
+  return text.split(RegExp(` (?=${CASTLE_ICONS.join('|')})`))
+    .map(name => name.replace(/🎗/, ''));
 }
 
 function battleGold(type, text) {

@@ -4,6 +4,12 @@ Upon logon the service listens to the battle report channel and saves normalized
 
 Currenlty supports only CW3.
 
+To complete telegram login process you need to seng auth code with HTTP GET to `/api/code`
+
+```
+curl "http://localhost:9922/api/code?code=66666"
+```
+
 ## Setup
 
 Use [TDLib build instructions generator](https://tdlib.github.io/td/build.html) to build Telegram binaries.

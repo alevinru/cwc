@@ -26,7 +26,6 @@ api.get('/code', async ctx => {
 
 app
   .use(api.routes())
-  // .use(cwApi.routes())
   .use(api.allowedMethods())
   .listen(REST_PORT);
 

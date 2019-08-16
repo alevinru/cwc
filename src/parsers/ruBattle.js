@@ -39,11 +39,8 @@ const POINTS_START_RE = /По итогам сражений замкам нач�
 export default function (text, reportDate) {
 
   const parts = text.split('\n\n');
-
   const results = [];
-
   const pointsText = lo.find(parts, p => POINTS_START_RE.test(p));
-
   const scores = scoresHash(pointsText || '');
 
   CASTLES.forEach((code, key) => {
@@ -57,7 +54,6 @@ export default function (text, reportDate) {
     }
 
     const [, gaIcon, statusIcon, resLine] = part.match(MAINLINE_RE) || [];
-
     const [, atkLine] = part.match(ATK_LINE_RE) || [];
     const [, defLine] = part.match(DEF_LINE_RE) || [];
     const [, goldType, goldText] = part.match(GOLD_LINE_RE) || [];

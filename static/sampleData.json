@@ -1,0 +1,148 @@
+{
+  "reportDate": "2019-08-13T14:03:34.000Z",
+  "date": "2019-08-13T16:00:00.000Z",
+  "results": [
+    {
+      "atkLeaders": [
+        "🍆Mathew",
+        "🖤[NL]tahir_go"
+      ],
+      "defLeaders": [
+        "🐢[TEA]Аргест ТС3О",
+        "🐢[RUМ]Alkin",
+        "🐢[BBS]MiniSatana",
+        "🐢[PYN]Голос свыше"
+      ],
+      "castle": "🐢",
+      "code": "t",
+      "result": "protected",
+      "difficulty": 0,
+      "ga": false,
+      "gold": 13,
+      "stock": 0,
+      "score": 64
+    },
+    {
+      "atkLeaders": [
+        "🐢[13G]BorovkovEA",
+        "🐢[WCH]Хранитель котят",
+        "🐢[НШ]eto je val",
+        "🐢[OCE]Atomic"
+      ],
+      "defLeaders": [
+        "☘️[НОЖ]Хранитель Оплота",
+        "☘️[НОЖ]В ПЕЧЕНЬ",
+        "☘️[TWR]pchelka",
+        "☘️[НОЖ]Щит Оплота"
+      ],
+      "castle": "☘️",
+      "code": "o",
+      "result": "breached",
+      "difficulty": 1,
+      "ga": false,
+      "gold": -9891,
+      "stock": -14706,
+      "score": 4
+    },
+    {
+      "atkLeaders": [],
+      "defLeaders": [],
+      "castle": "🌹",
+      "code": "r",
+      "result": "protected",
+      "difficulty": null,
+      "ga": false,
+      "gold": 0,
+      "stock": 0,
+      "score": 20
+    },
+    {
+      "atkLeaders": [
+        "🌹[LVT]OderRodion",
+        "🍆Canadian feller",
+        "🖤[KYS]SCIENTIST",
+        "🦇[ALC]Трунь"
+      ],
+      "defLeaders": [
+        "🍁[7DS]mIRA",
+        "🍁[9KA]su4ara 9KA",
+        "🍁[YLT]Fortunate son",
+        "🍁[7DS]Acedia"
+      ],
+      "castle": "🍁",
+      "code": "a",
+      "result": "protected",
+      "difficulty": 0,
+      "ga": false,
+      "gold": 88,
+      "stock": 0,
+      "score": 26
+    },
+    {
+      "atkLeaders": [
+        "🐢[JR]Шататель Скалы",
+        "🐢[DTF]ArtemisEntrery",
+        "🍁[RZD]47th",
+        "🍆[TND]Разруливает"
+      ],
+      "defLeaders": [
+        "🦇[DS]Sir Lancelot",
+        "🦇[NTR]Suworow",
+        "🦇[AFS]teffsy",
+        "🦇[DS]Crosby15"
+      ],
+      "castle": "🦇",
+      "code": "n",
+      "result": "breached",
+      "difficulty": 1,
+      "ga": false,
+      "gold": -9676,
+      "stock": -22307,
+      "score": 7
+    },
+    {
+      "atkLeaders": [
+        "🍁[A1]Nihilias",
+        "🍁[WH]CruorVultTigeron",
+        "🦇Rock Master",
+        "🌹Invisigod"
+      ],
+      "defLeaders": [
+        "🖤[TS]Poherantos",
+        "🖤[KVA]ДЕТОНАТОР",
+        "🖤[IRN]Sanktym",
+        "🖤[ARR]abubaca4"
+      ],
+      "castle": "🖤",
+      "code": "s",
+      "result": "protected",
+      "difficulty": 0,
+      "ga": false,
+      "gold": 191,
+      "stock": 0,
+      "score": 50
+    },
+    {
+      "atkLeaders": [
+        "🖤[SS]🎗AndreGod",
+        "🖤[NMR]Fishboss",
+        "🦇[TNT]Flame4",
+        "🖤[KSS]all4u"
+      ],
+      "defLeaders": [
+        "🍆[MLT]pelmenka",
+        "🍆[ЕGG]IS A TRAP",
+        "🍆[ASS]Дядя Стёпа",
+        "🍆[2CH]голос овощей"
+      ],
+      "castle": "🍆",
+      "code": "f",
+      "result": "breached",
+      "difficulty": 1,
+      "ga": false,
+      "gold": -10684,
+      "stock": -17382,
+      "score": 4
+    }
+  ]
+}

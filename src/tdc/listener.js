@@ -39,7 +39,6 @@ export default async function (update) {
     }
   } catch (e) {
     error(e);
-    process.exit();
   }
 
   const parsed = parser(text, battleMessageDate(update));

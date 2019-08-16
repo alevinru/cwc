@@ -76,7 +76,7 @@ describe('Battle results parser', function () {
       stock: 0,
       result: 'protected',
       atkLeaders: [
-        '🖤[SS]🎗AndreGod',
+        '🖤[SS]AndreGod',
         '☘️[OWL]Kaffka',
         '🖤[KSS]all4u',
         '🦇[TNT]Flame4',

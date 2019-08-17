@@ -3,11 +3,11 @@
 module.exports = {
   root: true,
   parserOptions: {
-    parser: 'babel-eslint'
+    ecmaVersion: 8,
+    sourceType: 'module',
   },
   env: {},
-  extends: ['airbnb-base', 'plugin:mocha/recommended'],
-  plugins: ['mocha'],
+  extends: ['airbnb-base'],
   globals: {},
   settings: {},
   rules: {

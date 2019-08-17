@@ -1,14 +1,15 @@
-import { expect, assert } from 'chai';
+import { assert } from 'chai';
 import * as mng from 'sistemium-mongo/lib/mongoose';
 import { readFile } from '../src/lib/fs';
 import listener from '../src/tdc/listener';
 
-before(async function() {
-  assert(process.env.MONGO_URL, 'Must be set MONGO_URL variable');
-  await mng.connect();
-});
 
 describe('Battle listener', function () {
+
+  before(async function () {
+    assert(process.env.MONGO_URL, 'Must be set MONGO_URL variable');
+    await mng.connect();
+  });
 
   it('should save to mongo', async function () {
 
@@ -18,8 +19,8 @@ describe('Battle listener', function () {
 
   });
 
-});
+  after(async function () {
+    await mng.disconnect();
+  });
 
-after(async function() {
-  await mng.disconnect();
 });

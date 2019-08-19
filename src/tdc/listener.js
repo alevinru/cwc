@@ -15,7 +15,7 @@ const chats = [
   -1001369273162, // CW3
 ];
 
-export default async function (update) {
+export default async function (update, tdc) {
 
   const { chat_id: chatId } = update;
 
@@ -30,7 +30,7 @@ export default async function (update) {
     return false;
   }
 
-  const { last_message: { date } } = update;
+  const { last_message: { date, id: messageId } } = update;
   debug('battle:', date, text.length);
 
   try {
@@ -44,6 +44,14 @@ export default async function (update) {
   const parsed = parser(text, battleMessageDate(update));
   const key = { date: parsed.date };
   const $setOnInsert = lo.omit(parsed, Object.keys(key));
+
+  if (tdc) {
+    try {
+      $setOnInsert.reportLink = await tdc.getMessageLink(messageId, chatId);
+    } catch (e) {
+      error('getMessageLink:', e);
+    }
+  }
 
   const args = [
     key,

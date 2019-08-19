@@ -1,6 +1,7 @@
 import { Schema, model } from 'mongoose';
 
 const resultsSchema = new Schema({
+
   _id: false,
   castle: String,
   name: String,
@@ -22,6 +23,9 @@ const resultsSchema = new Schema({
     gold: Number,
     id: Schema.Types.ObjectId,
   },
+
+  reportLink: String,
+
 });
 
 const battle = {

@@ -15,7 +15,7 @@ async function main() {
   const tdc = new CWCTdc({ emitter, codeEvent: GOT_CODE });
   const client = tdc.getClient();
 
-  client.on('update', listener);
+  client.on('update', update => listener(update, tdc));
 
   emitter.on(GOT_CODE, code => debug('got code', code));
 

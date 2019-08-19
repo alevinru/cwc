@@ -26,6 +26,10 @@ export default class CWCTdc {
     });
   }
 
+  destroy() {
+    return this.client.destroy();
+  }
+
   async init() {
 
     // this.emitter.on(this.codeEvent, code => debug('got code', code));
@@ -38,7 +42,7 @@ export default class CWCTdc {
 
     this.client
       .on('error', err => {
-        error(err);
+        error('tdc-error', err);
       })
       .on('destroy', () => {
         debug('destroy event');
@@ -62,6 +66,14 @@ export default class CWCTdc {
       this.emitter.once(this.codeEvent, resolve);
     });
 
+  }
+
+  async getMessageLink(messageId, chatId) {
+    return this.client.invoke({
+      _: 'getMessageLink',
+      chat_id: chatId,
+      message_id: messageId,
+    });
   }
 
 }

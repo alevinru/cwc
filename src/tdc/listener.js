@@ -47,7 +47,9 @@ export default async function (update, tdc) {
 
   if (tdc) {
     try {
-      $setOnInsert.reportLink = await tdc.getMessageLink(messageId, chatId);
+      const { url: reportLink } = await tdc.getMessageLink(messageId, chatId);
+      debug('reportLink:', reportLink);
+      $setOnInsert.reportLink = reportLink;
     } catch (e) {
       error('getMessageLink:', e);
     }

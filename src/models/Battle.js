@@ -24,8 +24,6 @@ const resultsSchema = new Schema({
     id: Schema.Types.ObjectId,
   },
 
-  reportLink: String,
-
 });
 
 const battle = {
@@ -35,6 +33,8 @@ const battle = {
 
   results: [resultsSchema],
   text: String,
+
+  reportLink: String,
 
   ts: Date,
 

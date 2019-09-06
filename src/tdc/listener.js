@@ -2,7 +2,9 @@ import log from 'sistemium-telegram/services/log';
 import lo from 'lodash';
 import { battleText, battleMessageDate } from '../lib/battles';
 import { writeFile } from '../lib/fs';
-import parser from '../parsers/ruBattle';
+import parser from '../parsers/battle';
+import * as ru from '../parsers/ruBattle';
+import * as eu from '../parsers/euBattle';
 
 import Battle from '../models/Battle';
 
@@ -10,16 +12,18 @@ const { debug, error } = log('listener');
 
 const { LOGS_PATH } = process.env;
 
-const chats = [
-  // -1001108112459, // CW2
-  -1001369273162, // CW3
-];
+const chats = new Map([
+  [-1001108112459, eu], // CW2
+  [-1001369273162, ru], // CW3
+]);
 
 export default async function (update, tdc) {
 
   const { chat_id: chatId } = update;
 
-  if (!chats.includes(chatId)) {
+  const settings = chats.get(chatId);
+
+  if (!settings) {
     return false;
   }
 
@@ -41,7 +45,7 @@ export default async function (update, tdc) {
     error(e);
   }
 
-  const parsed = parser(text, battleMessageDate(update));
+  const parsed = parser(text, battleMessageDate(update), settings);
   const key = { date: parsed.date };
   const $setOnInsert = lo.omit(parsed, Object.keys(key));
 

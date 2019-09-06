@@ -1,7 +1,7 @@
 import { addHours, format } from 'date-fns';
 import lo from 'lodash';
 
-const IS_BATTLE_RE = /Результаты сражений/;
+const IS_BATTLE_RE = /Результаты сражений|Battle reports/;
 
 export function battleDate(reportDate, BATTLE_HOUR) {
 

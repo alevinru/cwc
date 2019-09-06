@@ -1,7 +1,12 @@
-import ruBattle from '../src/parsers/ruBattle';
+import * as ruConst from '../src/parsers/ruBattle';
+import parser from '../src/parsers/battle';
 import { expect } from 'chai';
 import { readFile } from '../src/lib/fs';
 import { battleText, battleMessageDate, dateFormat } from '../src/lib/battles';
+
+function ruBattle(text, reportDate) {
+  return parser(text, reportDate, ruConst);
+}
 
 describe('Battle results parser', function () {
 

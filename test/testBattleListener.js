@@ -1,15 +1,11 @@
 import { assert } from 'chai';
-import * as mng from 'sistemium-mongo/lib/mongoose';
 import { readFile } from '../src/lib/fs';
 import listener from '../src/tdc/listener';
 
 
 describe('Battle listener', function () {
 
-  before(async function () {
-    assert(process.env.MONGO_URL, 'Must be set MONGO_URL variable');
-    await mng.connect();
-  });
+  assert(process.env.MONGO_URL_RU, 'Must be set MONGO_URL_RU variable');
 
   it('should save to mongo', async function () {
 
@@ -17,10 +13,6 @@ describe('Battle listener', function () {
     const created = await listener(JSON.parse(battleJson));
     assert(created, 'Saved battle should be not empty');
 
-  });
-
-  after(async function () {
-    await mng.disconnect();
   });
 
 });

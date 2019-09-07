@@ -40,6 +40,6 @@ const battle = {
 
 };
 
-const schema = new Schema(battle, { collection: 'Battle' });
+export const schema = new Schema(battle, { collection: 'Battle' });
 
 export default model('Battle', schema);

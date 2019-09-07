@@ -1,3 +1,4 @@
+import mongoose from 'mongoose';
 import log from 'sistemium-telegram/services/log';
 import lo from 'lodash';
 import { battleText, battleMessageDate } from '../lib/battles';
@@ -6,26 +7,28 @@ import parser from '../parsers/battle';
 import * as ru from '../parsers/ruBattle';
 import * as eu from '../parsers/euBattle';
 
-import Battle from '../models/Battle';
+import { schema } from '../models/Battle';
 
 const { debug, error } = log('listener');
 
 const { LOGS_PATH } = process.env;
 
 const chats = new Map([
-  [-1001108112459, eu], // CW2
-  [-1001369273162, ru], // CW3
+  [-1001108112459, { settings: eu, mongoUrl: process.env.MONGO_URL_EU }], // CW2
+  [-1001369273162, { settings: ru, mongoUrl: process.env.MONGO_URL_RU }], // CW3
 ]);
 
 export default async function (update, tdc) {
 
   const { chat_id: chatId } = update;
 
-  const settings = chats.get(chatId);
+  const chat = chats.get(chatId);
 
-  if (!settings) {
+  if (!chat) {
     return false;
   }
+
+  const { settings, mongoUrl } = chat;
 
   const text = battleText(update);
 
@@ -35,7 +38,7 @@ export default async function (update, tdc) {
   }
 
   const { last_message: { date, id: messageId } } = update;
-  debug('battle:', date, text.length);
+  debug('battle:', update._, date, text.length);
 
   try {
     if (LOGS_PATH) {
@@ -70,6 +73,21 @@ export default async function (update, tdc) {
 
   debug('saving:', key);
 
-  return Battle.findOneAndUpdate(...args);
+  const conn = await mongoConnection(mongoUrl);
 
+  debug('connected', mongoUrl);
+
+  const Battle = conn.model('Battle', schema);
+
+  const battle = await Battle.findOneAndUpdate(...args);
+
+  await conn.close();
+
+  return battle;
+
+}
+
+function mongoConnection(url) {
+  const options = { useNewUrlParser: true, useCreateIndex: true };
+  return mongoose.createConnection(`mongodb://${url}`, options);
 }
